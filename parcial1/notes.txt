@@ -1,0 +1,21 @@
+10/01/2017
+Pruebas Unitarias:
+ - Asserts son pruebas fatales (que si fallan, rompen el programa)
+ - Expects son pruebas no fatales (que no dan el resultado esperado, pero el programa sigue funcionando)
+
+Tipos de pruebas:
+ - Unit
+ 	Prueba los modulos o funciones del programa separadamente
+ - Memory
+ - Coverage
+ 	Revisa si todo el codigo es utilizado y todos los casos son cubiertos
+ - Interface
+ - Security
+ - Integration
+ - Local
+ 	Pruebas de carga
+ - Soak 
+ 	Como prueba de carga pero por un tiempo alargado
+ - Stress
+ 	Prueba los límites del sistema metiendo usuarios hasta que truene
+ - Regression
