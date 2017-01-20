@@ -1,6 +1,6 @@
 #include "cifrado.h"
 
-class Cesar : public Cifrado{
+class Cesar : public Cifrado {
 public:
 	Cesar() {}
 	~Cesar() {}
@@ -19,7 +19,7 @@ int Cesar::decrypt(string word) {
 			for (int i = 0; i < word.length(); i++) {
 				tempWord[i] = (((word[i]+offset)-97)%26)+97;
 			}
-			cout << "word: " << word << " offset: " << offset << " offseted: " << tempWord << endl;
+			// cout << "word: " << word << " offset: " << offset << " offseted: " << tempWord << endl;
 			// check if offseted 
 			while (getline(dictionary, line)) {
 				if (!tempWord.compare(line)) {
