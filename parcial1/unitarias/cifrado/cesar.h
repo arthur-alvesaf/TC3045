@@ -17,12 +17,12 @@ int Cesar::decrypt(string word) {
 		while (offset < 26) {
 			// offset word
 			for (int i = 0; i < word.length(); i++) {
-				tempWord[i] = (word[i] + offset)%26;
+				tempWord[i] = (((word[i]+offset)-97)%26)+97;
 			}
-			// cout << "word: " << word << " offset: " << offset << " offseted: " << tempWord << endl;
+			cout << "word: " << word << " offset: " << offset << " offseted: " << tempWord << endl;
 			// check if offseted 
 			while (getline(dictionary, line)) {
-				if (tempWord.compare(line)) {
+				if (!tempWord.compare(line)) {
 					dictionary.close();
 					return offset;
 				}
@@ -34,6 +34,7 @@ int Cesar::decrypt(string word) {
 			dictionary.seekg(0, ios::beg);
 		}
 		dictionary.close();
+		return -1;
 	} else {
 		// there was a problem openning file
 		cout << "Could not open dictionary" << endl;
